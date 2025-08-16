@@ -11,13 +11,15 @@
     <style>
         body {
             font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background-color: #FAFAFA;
         }
-        /* 昨年のサイトを参考にしたカラーテーマ */
-        .meiji-purple { color: #7B5AA6; }
-        .bg-meiji-purple { background-color: #7B5AA6; }
-        .border-meiji-purple { border-color: #7B5AA6; }
-        .meiji-gold { color: #E5B633; }
-        .bg-meiji-gold { background-color: #E5B633; }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
         .scroll-animation {
             opacity: 0;
             transform: translateY(30px);
@@ -29,16 +31,15 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-[#FAFAFA] text-gray-800">
 
     <!-- ヘッダー -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="bg-[#FAFAFA]/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="bg-meiji-purple text-white font-bold text-xl p-2 rounded-md">ロゴ</div>
-                <h1 class="text-xl md:text-2xl font-bold text-meiji-purple">ガバフェス2025</h1>
+                <img src="https://raw.githubusercontent.com/tycopos/govfes2025/refs/heads/main/logo_site.png" alt="ガバフェス2025 ロゴ" class="h-12 w-auto">
             </div>
-            <a href="#register" class="hidden md:inline-block bg-meiji-gold text-white font-bold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="#register" class="hidden md:inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                 参加申し込み
             </a>
         </div>
@@ -47,26 +48,26 @@
     <!-- メインコンテンツ -->
     <main>
         <!-- ヒーローセクション -->
-        <section class="relative h-[60vh] min-h-[400px] bg-cover bg-center text-white" style="background-image: url('https://placehold.co/1200x600/7B5AA6/FFFFFF?text=明治大学の校舎');">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <section class="relative h-[70vh] min-h-[450px] bg-cover bg-center text-white" style="background-image: url('https://raw.githubusercontent.com/tycopos/govfes2025/refs/heads/main/acacomo.avif');">
+            <div class="absolute inset-0 bg-black/50"></div>
             <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
-                <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
                     明治大学専門職大学院<br>ガバフェス2025
                 </h2>
-                <p class="text-xl md:text-2xl font-bold mb-2" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">その後のガバナンス</p>
-                <p class="text-2xl md:text-3xl font-bold bg-meiji-gold inline-block px-4 py-1 rounded-md">
+                <p class="text-xl md:text-2xl font-bold mb-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">その後のガバナンス</p>
+                <p class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 inline-block px-6 py-2 rounded-md">
                     2025.10.12 (Sun)
                 </p>
-                <a href="#register" class="mt-8 bg-meiji-purple text-white font-bold py-3 px-10 rounded-full text-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                <a href="#register" class="mt-8 bg-white text-gray-900 font-bold py-3 px-10 rounded-full text-lg hover:bg-gray-200 transition-transform hover:scale-105">
                     参加申し込みはこちら
                 </a>
             </div>
         </section>
 
         <!-- 開催目的 -->
-        <section id="purpose" class="py-16 md:py-24 bg-white scroll-animation">
+        <section id="purpose" class="py-16 md:py-24 scroll-animation">
             <div class="container mx-auto px-6 text-center">
-                <h3 class="text-3xl md:text-4xl font-bold text-meiji-purple mb-6">開催目的</h3>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">開催目的</h3>
                 <p class="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-gray-700">
                     修了後の学びの場を提供するとともに、修了生・現役生・教員間のつながりをより一層深めることを目的に、ワークショップ及び懇親会を開催します。<br><br>
                     本企画を通じて、ガバナンス研究科を基盤とする「ガバナンス・ファミリー」全体の交流と学びの循環を促進し、修了後も継続するネットワークの強化と、本会の活動基盤のさらなる充実を目指します。
@@ -75,13 +76,13 @@
         </section>
 
         <!-- 開催概要 -->
-        <section id="details" class="py-16 md:py-24 bg-gray-50 scroll-animation">
+        <section id="details" class="py-16 md:py-24 bg-gray-100 scroll-animation">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl md:text-4xl font-bold text-meiji-purple text-center mb-12">開催概要</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">開催概要</h3>
                 <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <!-- 第1部 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-meiji-purple">
-                        <h4 class="text-2xl font-bold text-meiji-purple mb-4">第1部：ワークショップ</h4>
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <h4 class="text-2xl font-bold text-blue-600 mb-4">第1部：ワークショップ</h4>
                         <p class="text-lg font-bold mb-4">テーマ：「その後のガバナンス」</p>
                         <ul class="space-y-3 text-gray-700">
                             <li><strong>日時:</strong> 2025年10月12日(日) 13:00～16:00 (12:30開場)</li>
@@ -91,8 +92,8 @@
                         </ul>
                     </div>
                     <!-- 第2部 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-meiji-gold">
-                        <h4 class="text-2xl font-bold text-meiji-purple mb-4">第2部：懇親会</h4>
+                    <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <h4 class="text-2xl font-bold text-purple-600 mb-4">第2部：懇親会</h4>
                         <p class="text-lg font-bold mb-4">レセプションパーティー</p>
                         <ul class="space-y-3 text-gray-700">
                             <li><strong>日時:</strong> 2025年10月12日(日) 16:30～19:00 (16:00開場)</li>
@@ -110,17 +111,17 @@
         </section>
 
         <!-- プログラム -->
-        <section id="program" class="py-16 md:py-24 bg-white scroll-animation">
+        <section id="program" class="py-16 md:py-24 scroll-animation">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl md:text-4xl font-bold text-meiji-purple text-center mb-12">プログラム</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">プログラム</h3>
                 <div class="max-w-4xl mx-auto">
                     <!-- タイムライン -->
-                    <div class="relative border-l-2 border-meiji-purple pl-8">
+                    <div class="relative border-l-2 border-gray-300 pl-8">
                         <!-- 第1部 -->
                         <div class="mb-12">
-                            <div class="absolute -left-4 w-8 h-8 bg-meiji-purple rounded-full text-white flex items-center justify-center font-bold">1</div>
+                            <div class="absolute -left-4 w-8 h-8 bg-blue-600 rounded-full text-white flex items-center justify-center font-bold ring-8 ring-[#FAFAFA]">1</div>
                             <p class="text-gray-500 text-sm">13:00 - 16:00</p>
-                            <h4 class="text-xl font-bold text-meiji-purple mt-1 mb-2">第1部：ワークショップ「その後のガバナンス」</h4>
+                            <h4 class="text-xl font-bold text-blue-600 mt-1 mb-2">第1部：ワークショップ「その後のガバナンス」</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
                                 <li>開会挨拶・趣旨説明</li>
                                 <li>スピードトーク・セッション (修了生4～6名)</li>
@@ -130,9 +131,9 @@
                         </div>
                         <!-- 第2部 -->
                         <div class="mb-8">
-                            <div class="absolute -left-4 w-8 h-8 bg-meiji-gold rounded-full text-white flex items-center justify-center font-bold">2</div>
+                            <div class="absolute -left-4 w-8 h-8 bg-purple-600 rounded-full text-white flex items-center justify-center font-bold ring-8 ring-[#FAFAFA]">2</div>
                             <p class="text-gray-500 text-sm">16:30 - 19:00</p>
-                            <h4 class="text-xl font-bold text-meiji-purple mt-1 mb-2">第2部：懇親会 (レセプションパーティー)</h4>
+                            <h4 class="text-xl font-bold text-purple-600 mt-1 mb-2">第2部：懇親会 (レセプションパーティー)</h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-1">
                                 <li>開会挨拶・研究科長挨拶</li>
                                 <li>歓談・ネットワーキング</li>
@@ -146,13 +147,13 @@
         </section>
 
         <!-- 幹事 -->
-        <section id="committee" class="py-16 md:py-24 bg-gray-50 scroll-animation">
+        <section id="committee" class="py-16 md:py-24 bg-gray-100 scroll-animation">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl md:text-4xl font-bold text-meiji-purple text-center mb-12">幹事</h3>
-                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">幹事</h3>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
                     <div class="mb-6">
-                        <h4 class="font-bold text-lg text-meiji-purple border-b-2 border-meiji-gold pb-2 mb-4">修了生・在校生</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-3">
+                        <h4 class="font-bold text-lg text-blue-600 border-b-2 border-gray-200 pb-2 mb-4">修了生・在校生</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-3 text-gray-700">
                             <p>石黒 (9期)</p>
                             <p>柳澤 (10期)</p>
                             <p>岩瀬 (11期)</p>
@@ -170,8 +171,8 @@
                         <p class="text-right text-sm text-gray-500 mt-2">※入学期順、五十音順、敬称略</p>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-meiji-purple border-b-2 border-meiji-gold pb-2 mb-4">大学</h4>
-                        <div class="flex space-x-6">
+                        <h4 class="font-bold text-lg text-blue-600 border-b-2 border-gray-200 pb-2 mb-4">大学</h4>
+                        <div class="flex space-x-6 text-gray-700">
                             <p>長畑研究科長</p>
                             <p>松浦専攻主任</p>
                             <p>専門職大学院事務室</p>
@@ -182,14 +183,14 @@
         </section>
 
         <!-- 参加申し込み -->
-        <section id="register" class="py-16 md:py-24 bg-white scroll-animation">
+        <section id="register" class="py-16 md:py-24 scroll-animation">
             <div class="container mx-auto px-6 text-center">
-                 <h3 class="text-3xl md:text-4xl font-bold text-meiji-purple mb-6">参加申し込み</h3>
+                 <h3 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">参加申し込み</h3>
                  <p class="max-w-2xl mx-auto text-lg text-gray-700 mb-8">
                     皆様のご参加を心よりお待ちしております。<br>
                     以下のボタンからお申し込みください。
                  </p>
-                 <a href="#" class="bg-meiji-gold text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-opacity-90 transition-transform hover:scale-105 inline-block">
+                 <a href="#" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-4 px-12 rounded-full text-xl hover:opacity-90 transition-opacity hover:scale-105 transform inline-block">
                     Googleフォームで申し込む
                  </a>
                  <p class="mt-4 text-sm text-gray-500">※申し込みフォームは準備中です。</p>
@@ -199,17 +200,17 @@
     </main>
 
     <!-- フッター -->
-    <footer class="bg-meiji-purple text-white">
+    <footer class="bg-[#0d1117] text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
                     <p class="font-bold">明治大学ガバナンス・ネットワーク</p>
-                    <p class="text-sm">主催：明治大学ガバナンス・ネットワーク</p>
-                    <p class="text-sm">協力：明治大学専門職大学院ガバナンス研究科</p>
+                    <p class="text-sm text-gray-400">主催：明治大学ガバナンス・ネットワーク</p>
+                    <p class="text-sm text-gray-400">協力：明治大学専門職大学院ガバナンス研究科</p>
                 </div>
                 <div class="flex items-center">
-                    <img src="https://placehold.co/150x150/FFFFFF/7B5AA6?text=キャラクター" alt="ガバナンス研究科キャラクター" class="h-24 w-auto rounded-full" onerror="this.style.display='none'">
-                    <p class="text-sm ml-4">&copy; 2025 Meiji University Governance Network. All Rights Reserved.</p>
+                    <img src="https://raw.githubusercontent.com/tycopos/govfes2025/851b58ff0e17a33ab7f803237c85068506a0a05a/meijiro.avif" alt="ガバナンス研究科キャラクター" class="h-24 w-24 object-cover rounded-full" onerror="this.style.display='none'">
+                    <p class="text-sm ml-4 text-gray-400">&copy; 2025 Meiji University Governance Network. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
